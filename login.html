@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="design.css" />
+</head>
+
+<body>
+    <form id="loginForm" class="form">
+        <p>Login</p>
+        <div class="group">
+            <input required="true" class="main-input" type="text" />
+            <span class="highlight-span"></span>
+            <label class="lebal-email">Email</label>
+        </div>
+        <div class="container-1">
+            <div class="group">
+                <input required="true" class="main-input" type="password" />
+                <span class="highlight-span"></span>
+                <label class="lebal-email">Password</label>
+            </div>
+        </div>
+        <button class="submit" type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Redirect to test.html
+            window.location.href = "test.html";
+        });
+    </script>
+</body>
+
+</html>

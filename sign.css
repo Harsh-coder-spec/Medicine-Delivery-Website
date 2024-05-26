@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+    /* Light gray background */
+}
+
+.form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.form p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.main-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.main-input:focus {
+    outline: none;
+    border-color: #007bff;
+    /* Blue border when input is focused */
+}
+
+.label-email {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    font-size: 16px;
+    color: #666;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.main-input:focus~.label-email,
+.main-input:valid~.label-email {
+    top: 0;
+    font-size: 12px;
+    color: #007bff;
+    /* Blue label color when input is focused or has content */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    /* Blue button background */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    /* Darker blue on button hover */
+    transform: scale(1.05);
+}

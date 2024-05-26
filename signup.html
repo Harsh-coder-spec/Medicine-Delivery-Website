@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="sign.css">
+</head>
+
+<body>
+    <form id="signupForm" class="form" onsubmit="return redirectToPassword()">
+        <p>Login</p>
+        <div class="group">
+            <input required class="main-input" type="text" name="email">
+            <span class="highlight-span"></span>
+            <label class="label-email">Email</label>
+        </div>
+        <button type="submit">Proceed With Email</button>
+    </form>
+
+    <script>
+        function redirectToPassword() {
+            // Get the email input value
+            var email = document.querySelector('input[name="email"]').value;
+
+            // Construct the password.html URL with email as query parameter
+            var passwordURL = 'password.html?email=' + encodeURIComponent(email);
+
+            // Redirect to the password.html page
+            window.location.href = passwordURL;
+
+            // Prevent the default form submission
+            return false;
+        }
+    </script>
+</body>
+
+</html>
